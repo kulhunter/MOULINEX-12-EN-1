@@ -1,312 +1,163 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recetario Manual Moulinex Maxichef 12 en 1 (Todo en Gramos)</title>
-    <style>
-        :root {
-            --primary: #c0392b;
-            --secondary: #27ae60;
-            --dark: #2c3e50;
-            --light: #f8f9fa;
-            --accent: #2980b9;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            background-color: var(--light);
-            color: #333;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 900px;
-            margin: auto;
-        }
-        header {
-            text-align: center;
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-            border-top: 5px solid var(--primary);
-        }
-        h1 { margin: 0; color: var(--primary); font-size: 1.8rem; }
-        p.subtitle { margin: 5px 0 0 0; color: #666; font-weight: 500; }
-        
-        .table-card, .recipe-card {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            margin-bottom: 25px;
-        }
-
-        h2 { color: var(--dark); border-bottom: 2px solid var(--primary); padding-bottom: 8px; margin-top: 0; }
-        h3 { color: var(--accent); margin-top: 15px; }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
-        th, td {
-            text-align: left;
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
-        }
-        th { background-color: #f2f2f2; color: var(--dark); }
-        
-        .gram { color: var(--primary); font-weight: bold; }
-        .program-tag {
-            display: inline-block;
-            background: #e1f5fe;
-            color: #0288d1;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-weight: bold;
-            font-size: 0.9em;
-        }
-        ul, ol { padding-left: 20px; }
-        li { margin-bottom: 6px; }
-        
-        .config-table td { font-size: 0.9em; }
-    </style>
+    <title>Moulinex Maxichef 12 en 1 - Smart App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Moulinex Maxichef 12 en 1 (Ref: 7211002181)</h1>
-            <p class="subtitle">Manual de Cocción Oficial y Recetario Convertido 100% a Gramos</p>
-        </header>
-
-        <!-- TABLA DE GRAMAJES DE ARROZ DEL MANUAL -->
-        <div class="table-card">
-            <h2>1. Guía Oficial de Cocción de Arroces (Convertida a Gramos)</h2>
-            <p>1 medida de taza del manual original equivale exactamente a <strong>160g de arroz seco</strong>. Utiliza estas proporciones exactas con tu balanza:</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Tipo de Arroz</th>
-                        <th>Peso Arroz (g)</th>
-                        <th>Agua Necesaria (g)</th>
-                        <th>Raciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Arroz Blanco Normal</strong></td>
-                        <td><span class="gram">300g</span><br><span class="gram">600g</span><br><span class="gram">900g</span></td>
-                        <td>Nivel 2 de la olla<br>Nivel 4 de la olla<br>Nivel 6 de la olla</td>
-                        <td>3 - 4 pers.<br>5 - 6 pers.<br>8 - 10 pers.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Arroz Blanco Redondo (Italiano)</strong></td>
-                        <td><span class="gram">870g</span><br><span class="gram">1450g</span></td>
-                        <td>Marca de 6 tazas<br>Marca de 10 tazas</td>
-                        <td>7 - 8 pers.<br>10 - 12 pers.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Arroz Moreno Integral</strong></td>
-                        <td><span class="gram">887g</span><br><span class="gram">1480g</span></td>
-                        <td>Marca de 6 tazas<br>Marca de 10 tazas</td>
-                        <td>7 - 8 pers.<br>10 - 12 pers.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Arroz para Risotto</strong></td>
-                        <td><span class="gram">870g</span><br><span class="gram">1450g</span></td>
-                        <td>Marca de 6 tazas<br>Marca de 10 tazas</td>
-                        <td>7 - 8 pers.<br>10 - 12 pers.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Arroz Glutinoso</strong></td>
-                        <td><span class="gram">736g</span><br><span class="gram">1227g</span></td>
-                        <td>Marca de 5 tazas<br>Marca de 9 tazas</td>
-                        <td>7 - 8 pers.<br>10 - 12 pers.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Arroz Jazmín / Japonés</strong></td>
-                        <td><span class="gram">870g</span><br><span class="gram">1450g</span></td>
-                        <td>Marca de 6 tazas<br>Marca de 10 tazas</td>
-                        <td>7 - 8 pers.<br>10 - 12 pers.</td>
-                    </tr>
-                </tbody>
-            </table>
+<body class="bg-slate-50 min-h-screen">
+    <!-- Header 3D -->
+    <header class="bg-red-700 text-white overflow-hidden relative shadow-xl">
+        <div class="max-w-5xl mx-auto px-4 py-12 flex flex-col md:flex-row items-center justify-between">
+            <div class="z-10 relative">
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-2 tracking-tight">Moulinex Maxichef</h1>
+                <p class="text-xl text-red-100 font-medium">Recetario Inteligente 100% en Gramos</p>
+                <div class="mt-4 flex gap-2">
+                    <span class="bg-red-900/50 px-3 py-1 rounded-full text-sm font-semibold shadow-inner border border-red-800"><i class="fas fa-microchip mr-1"></i> 12 en 1</span>
+                    <span class="bg-red-900/50 px-3 py-1 rounded-full text-sm font-semibold shadow-inner border border-red-800"><i class="fas fa-scale-balanced mr-1"></i> UX/CX Premium</span>
+                </div>
+            </div>
+            <!-- 3D CSS Pot Representation -->
+            <div class="pot-3d-container mt-8 md:mt-0 z-10">
+                <div class="pot">
+                    <div class="pot-lid">
+                        <div class="pot-handle"></div>
+                    </div>
+                    <div class="pot-body">
+                        <div class="pot-panel">
+                            <div class="screen">00:00</div>
+                            <div class="btn"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- BG decorations -->
+            <div class="absolute top-0 right-0 w-64 h-64 bg-red-600 rounded-full blur-3xl opacity-50 -mr-20 -mt-20"></div>
+            <div class="absolute bottom-0 left-10 w-48 h-48 bg-red-800 rounded-full blur-3xl opacity-40 -mb-20"></div>
         </div>
+    </header>
 
-        <!-- TABLA DE PROGRAMAS Y TIEMPOS -->
-        <div class="table-card">
-            <h2>2. Parámetros Técnicos de la Máquina</h2>
-            <table class="config-table">
-                <thead>
-                    <tr>
-                        <th>Programa</th>
-                        <th>Tiempo por Defecto</th>
-                        <th>Rango Tiempo</th>
-                        <th>Temp. Máx</th>
-                        <th>Posición Tapa</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Rice / Cereal</strong></td>
-                        <td>Automático</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>Cerrada</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Risotto</strong></td>
-                        <td>Automático</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>Cerrada</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Stew (Guisar)</strong></td>
-                        <td>60 min</td>
-                        <td>20 min - 9 h</td>
-                        <td>100°C</td>
-                        <td>Cerrada</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Crust / Fry (Sofreír)</strong></td>
-                        <td>15 min</td>
-                        <td>5 min - 60 min</td>
-                        <td>160°C</td>
-                        <td>Abierta / Cerrada</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Baking / Dessert</strong></td>
-                        <td>35 min</td>
-                        <td>20 min - 4 h</td>
-                        <td>135°C</td>
-                        <td>Cerrada</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Steam / Soup</strong></td>
-                        <td>30 min</td>
-                        <td>15 min - 2 h</td>
-                        <td>100°C</td>
-                        <td>Cerrada</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Yogurt</strong></td>
-                        <td>8 h</td>
-                        <td>6 h - 12 h</td>
-                        <td>42°C</td>
-                        <td>Cerrada</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Baby Food</strong></td>
-                        <td>10 min</td>
-                        <td>5 min - 90 min</td>
-                        <td>100°C</td>
-                        <td>Cerrada</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    <main class="max-w-5xl mx-auto px-4 py-8">
+        
+        <!-- Rice Guide Table from PDF -->
+        <section class="mb-12 bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+            <div class="bg-slate-800 px-6 py-4 flex items-center justify-between">
+                <h2 class="text-xl font-bold text-white"><i class="fas fa-book-open mr-2 text-slate-300"></i> Guía Oficial de Arroces (Gramos)</h2>
+                <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded font-mono">PDF Ref: 7211002181</span>
+            </div>
+            <div class="overflow-x-auto p-4">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-slate-50 text-slate-500 text-xs uppercase tracking-wider font-bold">
+                            <th class="p-3 rounded-tl-lg">Tipo de Arroz</th>
+                            <th class="p-3">Gramos (Balanza)</th>
+                            <th class="p-3">Agua (Nivel Olla)</th>
+                            <th class="p-3 rounded-tr-lg">Raciones</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-slate-700 divide-y divide-slate-100 text-sm">
+                        <tr class="hover:bg-red-50 transition">
+                            <td class="p-3 font-semibold text-slate-800">Arroz Blanco Normal</td>
+                            <td class="p-3 text-red-600 font-bold">300g / 600g / 900g</td>
+                            <td class="p-3 font-medium text-slate-600">Marca 2 / 4 / 6</td>
+                            <td class="p-3">3-4 / 5-6 / 8-10</td>
+                        </tr>
+                        <tr class="hover:bg-red-50 transition">
+                            <td class="p-3 font-semibold text-slate-800">Arroz Redondo (Italiano)</td>
+                            <td class="p-3 text-red-600 font-bold">870g / 1450g</td>
+                            <td class="p-3 font-medium text-slate-600">Marca 6 / 10</td>
+                            <td class="p-3">7-8 / 10-12</td>
+                        </tr>
+                        <tr class="hover:bg-red-50 transition">
+                            <td class="p-3 font-semibold text-slate-800">Arroz Moreno (Integral)</td>
+                            <td class="p-3 text-red-600 font-bold">887g / 1480g</td>
+                            <td class="p-3 font-medium text-slate-600">Marca 6 / 10</td>
+                            <td class="p-3">7-8 / 10-12</td>
+                        </tr>
+                        <tr class="hover:bg-red-50 transition">
+                            <td class="p-3 font-semibold text-slate-800">Arroz Glutinoso</td>
+                            <td class="p-3 text-red-600 font-bold">736g / 1227g</td>
+                            <td class="p-3 font-medium text-slate-600">Marca 5 / 9</td>
+                            <td class="p-3">7-8 / 10-12</td>
+                        </tr>
+                        <tr class="hover:bg-red-50 transition">
+                            <td class="p-3 font-semibold text-slate-800">Arroz Jazmín / Japonés</td>
+                            <td class="p-3 text-red-600 font-bold">870g / 1450g</td>
+                            <td class="p-3 font-medium text-slate-600">Marca 6 / 10</td>
+                            <td class="p-3">7-8 / 10-12</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
-        <!-- RECETARIO DEL MANUAL EN GRAMOS -->
-        <h2>3. Recetas del Manual Adaptadas 100% a Gramos</h2>
+        <!-- Controls (Search & Filter) -->
+        <section class="mb-8 sticky top-4 z-40 bg-slate-50/90 backdrop-blur-md p-4 rounded-2xl shadow-sm border border-slate-200">
+            <div class="flex flex-col md:flex-row gap-4 justify-between items-center">
+                <div class="relative w-full md:w-1/3">
+                    <i class="fas fa-search absolute left-4 top-3.5 text-slate-400"></i>
+                    <input type="text" id="searchInput" placeholder="Buscar receta o ingrediente..." class="w-full pl-11 pr-4 py-3 rounded-xl border border-slate-200 shadow-inner focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all outline-none text-slate-700 bg-white">
+                </div>
+                <div class="w-full md:w-2/3 flex flex-wrap gap-2 justify-end" id="filterContainer">
+                    <!-- Filters injected by JS -->
+                </div>
+            </div>
+        </section>
 
-        <!-- RECETA 1 -->
-        <div class="recipe-card">
-            <h3>Guiso Tradicional de Carne y Verduras</h3>
-            <span class="program-tag">Programas: Crust/Fry + Stew</span>
-            <h4>Ingredientes en Gramos:</h4>
-            <ul>
-                <li>Aceite de oliva: <span class="gram">20g</span></li>
-                <li>Cebolla picada: <span class="gram">120g</span></li>
-                <li>Carne de vacuno para guiso (en cubos): <span class="gram">500g</span></li>
-                <li>Zanahoria en rodajas: <span class="gram">150g</span></li>
-                <li>Patatas en trozos medianos: <span class="gram">400g</span></li>
-                <li>Caldo de carne o agua: <span class="gram">650g</span></li>
-                <li>Tomate frito / triturado: <span class="gram">100g</span></li>
-                <li>Sal: <span class="gram">10g</span></li>
-                <li>Pimienta y especias: a gusto</li>
-            </ul>
-            <h4>Paso a Paso:</h4>
-            <ol>
-                <li>Coloca la olla sobre la balanza, presiona <strong>Tara</strong> y añade los <span class="gram">20g</span> de aceite y los <span class="gram">120g</span> de cebolla.</li>
-                <li>Selecciona el programa <strong>CRUST / FRY</strong> durante 10 minutos con la tapa abierta para dorar la cebolla y luego añade los <span class="gram">500g</span> de carne para sellarla.</li>
-                <li>Cancela el programa (botón <em>Keep Warm / Cancel</em>). Añade a la olla los <span class="gram">150g</span> de zanahoria, los <span class="gram">400g</span> de patatas, los <span class="gram">100g</span> de tomate y los <span class="gram">10g</span> de sal.</li>
-                <li>Añade los <span class="gram">650g</span> de caldo o agua.</li>
-                <li>Cierra la tapa, selecciona el programa <strong>STEW</strong>, ajusta el tiempo a <strong>60 minutos</strong> y presiona <strong>START</strong>.</li>
-            </ol>
-        </div>
+        <!-- Recipes Grid -->
+        <section id="recipesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Cards injected by JS -->
+        </section>
 
-        <!-- RECETA 2 -->
-        <div class="recipe-card">
-            <h3>Sopa Saludable de Verduras al Vapor</h3>
-            <span class="program-tag">Programa: Steam / Soup</span>
-            <h4>Ingredientes en Gramos:</h4>
-            <ul>
-                <li>Agua: <span class="gram">1000g</span> (1 Litro)</li>
-                <li>Calabacín picado: <span class="gram">200g</span></li>
-                <li>Zanahoria: <span class="gram">150g</span></li>
-                <li>Puerro: <span class="gram">100g</span></li>
-                <li>Patata: <span class="gram">200g</span></li>
-                <li>Sal: <span class="gram">8g</span></li>
-                <li>Aceite de oliva: <span class="gram">15g</span></li>
-            </ul>
-            <h4>Paso a Paso:</h4>
-            <ol>
-                <li>Pesa los <span class="gram">1000g</span> de agua directamente en el vaso de la olla.</li>
-                <li>Coloca las verduras pesadas (<span class="gram">200g</span> calabacín, <span class="gram">150g</span> zanahoria, <span class="gram">100g</span> puerro, <span class="gram">200g</span> patata) dentro del cestillo de vapor o directamente en el agua según la textura deseada.</li>
-                <li>Sazona con los <span class="gram">8g</span> de sal y <span class="gram">15g</span> de aceite.</li>
-                <li>Cierra la tapa, selecciona <strong>STEAM / SOUP</strong>, ajusta a <strong>35 minutos</strong> y dale a <strong>START</strong>.</li>
-            </ol>
-        </div>
+    </main>
 
-        <!-- RECETA 3 -->
-        <div class="recipe-card">
-            <h3>Yogur Casero Natural</h3>
-            <span class="program-tag">Programa: Yogurt</span>
-            <h4>Ingredientes en Gramos:</h4>
-            <ul>
-                <li>Leche entera: <span class="gram">1000g</span> (1 Litro)</li>
-                <li>Yogur natural (como fermento): <span class="gram">120g</span></li>
-                <li>Azúcar o endulzante (opcional): <span class="gram">40g</span></li>
-            </ul>
-            <h4>Paso a Paso:</h4>
-            <ol>
-                <li>En un recipiente mezcla batiendo ligeramente los <span class="gram">1000g</span> de leche con los <span class="gram">120g</span> de yogur y los <span class="gram">40g</span> de azúcar.</li>
-                <li>Vierte la mezcla directamente en la olla desmontable (o en tarros de cristal aptos sin tapa colocados dentro).</li>
-                <li>Cierra la tapa de la máquina.</li>
-                <li>Selecciona el programa <strong>YOGURT</strong> (el tiempo por defecto es de 8 horas) y presiona <strong>START</strong>.</li>
-                <li>Una vez completado, lleva el recipiente al refrigerador por al menos 4 horas antes de consumir.</li>
-            </ol>
-        </div>
-
-        <!-- RECETA 4 -->
-        <div class="recipe-card">
-            <h3>Bizcocho Esponjoso Básico</h3>
-            <span class="program-tag">Programa: Baking / Dessert</span>
-            <h4>Ingredientes en Gramos:</h4>
-            <ul>
-                <li>Harina de trigo de repostería: <span class="gram">200g</span></li>
-                <li>Azúcar: <span class="gram">150g</span></li>
-                <li>Mantequilla derretida: <span class="gram">100g</span></li>
-                <li>Huevos: <span class="gram">150g</span> (~3 huevos)</li>
-                <li>Leche: <span class="gram">80g</span></li>
-                <li>Polvo de hornear: <span class="gram">10g</span></li>
-            </ul>
-            <h4>Paso a Paso:</h4>
-            <ol>
-                <li>En un bowl aparte, bate los <span class="gram">150g</span> de huevo con los <span class="gram">150g</span> de azúcar.</li>
-                <li>Integra los <span class="gram">100g</span> de mantequilla y los <span class="gram">80g</span> de leche.</li>
-                <li>Pesa y tamiza los <span class="gram">200g</span> de harina junto a los <span class="gram">10g</span> de polvo de hornear e incorpóralos a la mezcla.</li>
-                <li>Enmantequilla la cubeta interior e introduce la mezcla.</li>
-                <li>Cierra la tapa, selecciona <strong>BAKING / DESSERT</strong>, ajusta el tiempo a <strong>45 minutos</strong> y presiona <strong>START</strong>.</li>
-            </ol>
+    <!-- Modal for Recipe Details -->
+    <div id="recipeModal" class="fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-[100] hidden items-center justify-center p-4">
+        <div class="bg-white w-full max-w-3xl max-h-[90vh] rounded-2xl shadow-2xl flex flex-col overflow-hidden transform transition-all scale-95 opacity-0" id="modalContent">
+            <!-- Modal header -->
+            <div class="bg-slate-800 text-white px-6 py-5 flex justify-between items-start border-b-4 border-red-600">
+                <div>
+                    <h2 id="modalTitle" class="text-2xl font-bold mb-1">Recipe Title</h2>
+                    <div class="flex gap-2">
+                        <span id="modalProgram" class="inline-block bg-red-500 text-white text-xs px-2 py-1 rounded font-bold uppercase tracking-wider shadow-inner">Program</span>
+                        <span id="modalTime" class="inline-block bg-slate-700 text-slate-200 text-xs px-2 py-1 rounded font-bold uppercase tracking-wider"><i class="far fa-clock mr-1"></i> Time</span>
+                    </div>
+                </div>
+                <button id="closeModalBtn" class="text-slate-400 hover:text-white transition rounded-full p-2 hover:bg-slate-700 outline-none">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <!-- Modal Body -->
+            <div class="overflow-y-auto p-6 bg-slate-50 flex-1">
+                <div class="flex flex-col md:flex-row gap-8">
+                    <!-- Ingredients -->
+                    <div class="w-full md:w-5/12 bg-white p-5 rounded-xl border border-slate-100 shadow-sm h-fit">
+                        <h3 class="text-lg font-bold text-slate-800 border-b-2 border-red-500 pb-2 mb-4 flex items-center">
+                            <i class="fas fa-scale-balanced text-red-500 mr-2 text-xl"></i> Ingredientes (Gramos)
+                        </h3>
+                        <p class="text-xs text-slate-500 mb-3 italic">Usa el botón "Tara" en tu balanza antes de cada ingrediente.</p>
+                        <ul id="modalIngredients" class="space-y-3 text-sm text-slate-700 font-medium">
+                            <!-- Injected -->
+                        </ul>
+                    </div>
+                    <!-- Steps -->
+                    <div class="w-full md:w-7/12">
+                        <h3 class="text-lg font-bold text-slate-800 border-b-2 border-slate-300 pb-2 mb-4 flex items-center">
+                            <i class="fas fa-list-check text-slate-500 mr-2 text-xl"></i> Paso a Paso
+                        </h3>
+                        <div id="modalSteps" class="space-y-3">
+                            <!-- Injected -->
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
-
-```
